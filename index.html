@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruise Career Hub - Your Journey at Sea Starts Here</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --secondary: #003366;
+            --accent: #00aaff;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.8)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .text-center .section-title:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .benefit-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .form-section {
+            background-color: var(--light);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .job-role-card {
+            border-left: 4px solid var(--primary);
+        }
+        
+        .testimonial-card {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .footer {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .nav-logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .nav-logo span {
+            color: var(--secondary);
+        }
+        
+        .encouragement-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .help-box {
+            background-color: #e8f5e9;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand nav-logo" href="#"><i class="fas fa-ship me-2"></i>Cruise<span>Career</span>Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#positions">Positions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#requirements">Requirements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#apply">Apply Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 fw-bold mb-4">Your Adventure at Sea Awaits</h1>
+                    <p class="lead mb-4">Join world-class cruise lines and travel the world while building your career. We're hiring hospitality professionals for exciting roles onboard luxury cruise ships.</p>
+                    <a href="#apply" class="btn btn-primary btn-lg px-5 py-3">Start Your Application <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-number">15,000+</div>
+                    <p>Crew Members Placed</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-number">50+</div>
+                    <p>Partner Cruise Lines</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-number">120+</div>
+                    <p>Countries Visited</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-number">98%</div>
+                    <p>Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto text-center mb-5">
+                    <h2 class="section-title">Why Work on a Cruise Ship?</h2>
+                    <p>Experience the unique benefits of a career at sea</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card benefit-card p-4">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h4>Travel The World</h4>
+                        <p>Visit exotic destinations across the globe while getting paid. From Caribbean islands to Mediterranean ports and Alaskan fjords.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card benefit-card p-4">
+                        <div class="benefit-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h4>Competitive Salary</h4>
+                        <p>Earn a competitive tax-free salary with room for growth. Most positions include accommodation, meals, and medical insurance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card benefit-card p-4">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Cultural Exchange</h4>
+                        <p>Work with colleagues from over 80 different countries. Build lifelong friendships and expand your cultural horizons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Positions -->
+    <section id="positions" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Open Positions</h2>
+                    <p>We're hiring for various departments onboard</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card job-role-card p-4 h-100">
+                        <h4><i class="fas fa-utensils text-primary me-2"></i>Food & Beverage</h4>
+                        <ul class="mt-3">
+                            <li>Waiters & Bartenders</li>
+                            <li>Assistant Cooks & Chefs</li>
+                            <li>Baristas & Buffet Attendants</li>
+                            <li>Restaurant Managers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card job-role-card p-4 h-100">
+                        <h4><i class="fas fa-concierge-bell text-primary me-2"></i>Hotel Operations</h4>
+                        <ul class="mt-3">
+                            <li>Cabin Stewards</li>
+                            <li>Housekeeping Attendants</li>
+                            <li>Laundry Operators</li>
+                            <li>Hotel Supervisors</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card job-role-card p-4 h-100">
+                        <h4><i class="fas fa-heart text-primary me-2"></i>Entertainment & Services</h4>
+                        <ul class="mt-3">
+                            <li>Youth Staff & Counselors</li>
+                            <li>Spa Therapists</li>
+                            <li>Fitness Instructors</li>
+                            <li>Photographers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card job-role-card p-4 h-100">
+                        <h4><i class="fas fa-tools text-primary me-2"></i>Technical & Deck</h4>
+                        <ul class="mt-3">
+                            <li>Deckhands</li>
+                            <li>Engine Utility</li>
+                            <li>Plumbers & Electricians</li>
+                            <li>Security Personnel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section id="requirements" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Basic Requirements</h2>
+                    <p>What you need to qualify for cruise ship employment</p>
+                </div>
+            </div>
+            
+            <!-- Encouragement Box -->
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="help-box">
+                        <h4><i class="fas fa-hands-helping me-2"></i>We're Here to Help You!</h4>
+                        <p class="mb-0">Don't worry if you don't meet all requirements yet! Many of our successful applicants started with limited experience. Our team can guide you through the process, help you understand what's needed, and connect you with resources to get the necessary documents and training. Your dream job at sea is closer than you think!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-check-circle text-primary fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5>Age & Health</h5>
+                                    <p>Minimum 21 years old with good physical and mental health. Must pass a medical examination.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-check-circle text-primary fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5>Experience</h5>
+                                    <p>Some relevant experience is helpful, but we can help match you with entry-level positions too!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-check-circle text-primary fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5>Language Skills</h5>
+                                    <p>Basic English communication skills. We can help improve your language skills if needed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-check-circle text-primary fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5>Documentation</h5>
+                                    <p>Passport is required, but we can guide you through the application process. STCW certification can be obtained after hiring for some positions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-check-circle text-primary fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5>Background Check</h5>
+                                    <p>Clean criminal record required for most positions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fas fa-check-circle text-primary fa-lg"></i>
+                                </div>
+                                <div>
+                                    <h5>Availability</h5>
+                                    <p>Willing to commit to 6-9 month contracts and work long hours when required.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Encouragement -->
+                    <div class="encouragement-box mt-5">
+                        <h5><i class="fas fa-lightbulb me-2"></i>No Experience? No Problem!</h5>
+                        <p class="mb-0">Many cruise lines offer training programs for motivated individuals with the right attitude. If you're willing to learn and work hard, we can help you start your maritime career. Contact us to learn about entry-level opportunities and training options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="apply" class="py-5 form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card shadow border-0">
+                        <div class="card-body p-5">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <h2 class="section-title mb-4">Start Your Cruise Ship Career</h2>
+                                    <p class="mb-4">Fill out the form below and our experienced team will contact you to discuss opportunities and guide you through the process. We help with documentation, training, and placement.</p>
+                                    
+                                    <!-- FormSubmit Form -->
+                                    <form id="contactform" action="https://formsubmit.co/f97d268696b7f8a3ed19667845939818" method="POST">
+                                        <input name="_formsubmit_id" type="text" style="display:none">
+                                        
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="name" class="form-label">Full Name *</label>
+                                                <input name="name" type="text" class="form-control" id="name" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="email" class="form-label">Email Address *</label>
+                                                <input name="email" type="email" class="form-control" id="email" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="phone" class="form-label">WhatsApp Number  *</label>
+                                                <input name="phone" type="tel" class="form-control" id="phone" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="nationality" class="form-label">Nationality *</label>
+                                                <input name="nationality" type="text" class="form-control" id="nationality" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="country" class="form-label">Current Country of Residence *</label>
+                                                <input name="country" type="text" class="form-control" id="country" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="position" class="form-label">Desired Position *</label>
+                                                <select name="position" class="form-select" id="position" required>
+                                                    <option value="" selected disabled>Select a position</option>
+                                                    <option value="Food & Beverage">Food & Beverage</option>
+                                                    <option value="Hotel Operations">Hotel Operations</option>
+                                                    <option value="Entertainment & Services">Entertainment & Services</option>
+                                                    <option value="Technical & Deck">Technical & Deck</option>
+                                                    <option value="Not Sure - Need Guidance">Not Sure - Need Guidance</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="experience" class="form-label">Years of Experience *</label>
+                                                <select name="experience" class="form-select" id="experience" required>
+                                                    <option value="" selected disabled>Select experience</option>
+                                                    <option value="No experience">No experience</option>
+                                                    <option value="Less than 1 year">Less than 1 year</option>
+                                                    <option value="1-2 years">1-2 years</option>
+                                                    <option value="3-5 years">3-5 years</option>
+                                                    <option value="5+ years">5+ years</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="passport" class="form-label">Do you have a valid passport? *</label>
+                                                <select name="passport" class="form-select" id="passport" required>
+                                                    <option value="" selected disabled>Select option</option>
+                                                    <option value="Yes">Yes</option>
+                                                    <option value="No, but I can apply">No, but I can apply</option>
+                                                    <option value="No, need help">No, need help with the process</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="stcw" class="form-label">Do you have STCW certificate? *</label>
+                                                <select name="stcw" class="form-select" id="stcw" required>
+                                                    <option value="" selected disabled>Select option</option>
+                                                    <option value="Yes">Yes</option>
+                                                    <option value="No">No</option>
+                                                    <option value="What is STCW?">What is STCW?</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="english" class="form-label">English Proficiency *</label>
+                                                <select name="english" class="form-select" id="english" required>
+                                                    <option value="" selected disabled>Select level</option>
+                                                    <option value="Basic">Basic</option>
+                                                    <option value="Intermediate">Intermediate</option>
+                                                    <option value="Advanced">Advanced</option>
+                                                    <option value="Fluent">Fluent</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="comment" class="form-label">Tell Us About Your Situation</label>
+                                                <textarea name="comment" class="form-control" id="comment" rows="3" placeholder="What challenges are you facing? What kind of help do you need? What are your career goals?"></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                                    <label class="form-check-label" for="agreeTerms">
+                                                        I agree to the processing of my personal data according to the Privacy Policy *
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <button type="submit" class="btn btn-primary btn-lg px-5">Get Personalized Assistance</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
+                                    <!-- Success Message -->
+                                    <div id="successMessage" class="success-message">
+                                        <i class="fas fa-check-circle me-2"></i>
+                                        <strong>Thank you for your application!</strong> We have received your information and will contact you within 24 hours.
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-5 mt-lg-0">
+                                    <div class="bg-primary text-white p-4 rounded h-100">
+                                        <h4 class="mb-4">We'll Help You Succeed</h4>
+                                        <p>Our experienced team has helped thousands achieve their dream of working at sea. We provide:</p>
+                                        <ul class="mb-4">
+                                            <li>Guidance on requirements</li>
+                                            <li>Help with documentation</li>
+                                            <li>Training recommendations</li>
+                                            <li>Interview preparation</li>
+                                            <li>Placement assistance</li>
+                                        </ul>
+                                        <!-- <div class="mb-3">
+                                            <i class="fas fa-phone me-2"></i> +1 (555) 123-4567
+                                        </div>
+                                        <div class="mb-3">
+                                            <i class="fas fa-envelope me-2"></i> help@cruisecareerhub.com
+                                        </div> -->
+                                        <div class="mb-4">
+                                            <i class="fas fa-clock me-2"></i> Mon-Fri: 9AM - 6PM
+                                        </div>
+                                        <h5 class="mb-3">Success Stories</h5>
+                                        <p>"I had no experience but they trained me and now I've visited 15 countries!" - Maria, former applicant</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="section-title">Success Stories</h2>
+                    <p>Hear from crew members who started their journey with us</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Maria" class="rounded-circle" width="60">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Maria Santos</h5>
+                                <p class="text-muted mb-0">Former Retail Worker, Now Waitress</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"I had zero cruise experience and wasn't sure about the requirements. The team guided me through everything - from getting my passport to the STCW training. Now I've visited 25 countries!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0">
+                                <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="John" class="rounded-circle" width="60">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">John Rodriguez</h5>
+                                <p class="text-muted mb-0">Former Teacher, Now Youth Staff</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"I was worried about my English skills and lack of maritime experience. The recruitment team connected me with language resources and found me a perfect entry-level position."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="flex-shrink-0">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie" class="rounded-circle" width="60">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Sophie Williams</h5>
+                                <p class="text-muted mb-0">Recent Graduate, Now Hotel Staff</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"As a new graduate with no experience, I thought cruise jobs were out of reach. The team helped me understand the requirements and matched me with a training program. Life-changing!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    I don't have experience. Can I still apply?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Absolutely!</strong> Many cruise lines offer entry-level positions and training programs for motivated individuals. We can help match you with opportunities that fit your background and provide guidance on how to get started.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    I don't have a passport or STCW. Can you help?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Yes, we can guide you through the process!</strong> We provide step-by-step assistance for passport applications and can recommend affordable STCW training centers. Some positions may even offer training after you're hired.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    My English isn't perfect. Is that a problem?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Basic English communication is sufficient for many entry-level positions. We can assess your level and recommend positions that match your skills. We also have resources to help improve your English.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Are there any fees for your help?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <strong>Our placement services are completely free for applicants.</strong> You are only responsible for official costs like passport fees, medical exams, and certifications (which we can help you find at reasonable prices).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="mb-4"><i class="fas fa-ship me-2"></i>CruiseCareerHub</h4>
+                    <p>Helping aspiring maritime professionals achieve their dreams since 2010. We believe everyone deserves a chance to work at sea.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#benefits" class="text-white text-decoration-none">Benefits</a></li>
+                        <li class="mb-2"><a href="#positions" class="text-white text-decoration-none">Positions</a></li>
+                        <li class="mb-2"><a href="#requirements" class="text-white text-decoration-none">Requirements</a></li>
+                        <li class="mb-2"><a href="#apply" class="text-white text-decoration-none">Apply Now</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Ocean Drive, Miami, FL</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> cruisecareerhubs@gmail.com</li>
+                    </ul>
+                </div> -->
+                <div class="col-lg-3">
+                    <h5 class="mb-4">We Work With</h5>
+                    <p>Royal Caribbean, Carnival, Norwegian, MSC, Disney Cruise Line and many other leading cruise companies.</p>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 CruiseCareerHub. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="./legal.html" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="./legal.html" class="text-white text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Form submission handler
+        document.getElementById('contactform').addEventListener('submit', function(e) {
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Scroll to success message
+            setTimeout(function() {
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            }, 500);
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
